@@ -15,7 +15,7 @@ class { 'mysql::server': }
 class { 'mysql::php': }
 
 mysql::db { 'symfony':
-  user     => 'root',
+  user     => 'symfony',
   password => '',
   host     => 'localhost',
   grant    => ['all'],
