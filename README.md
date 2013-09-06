@@ -14,3 +14,15 @@
 4. cd puppet && librarian-puppet install
 5. vagrant up
 6. Browse to http://your.domain.dev/app_dev.php/
+
+## What's next?
+
+### Change the domain name
+
+* In `puppet/manifests/site.pp` -> change the line with 'apache::vhost { 'your.domain.com':'
+* Update your hosts file (`/etc/hosts`) with the new domain
+
+### Setup database
+
+* doctrine:database:create
+* doctrine:schema:update --force

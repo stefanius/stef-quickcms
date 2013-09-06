@@ -60,6 +60,11 @@ class ScriptHandler
             echo $process->getOutput();
         }
 
+        // @todo do this using a patch file, but I don't how to create
+        // a patch file that actually deletes a dir/file
+        printf("Deleting %s\n", $rootDir . '/src/Acme');
+        $filesystem = new Filesystem();
+        $filesystem->remove($rootDir . '/src/Acme');
     }
 
     public static function patchComposerJson(Event $event)
@@ -74,21 +79,6 @@ class ScriptHandler
         file_put_contents($composerJson, file_get_contents($standardComposerJson));
 
         return;
-//
-//        $config = json_decode(file_get_contents($standardComposerJson), true);
-//        $manipulator = new JsonManipulator(file_get_contents($composerJson));
-//
-//        foreach($config['require'] as $package => $constraint) {
-//            $manipulator->addLink('require', $package, $constraint);
-//        }
-//
-//        foreach($config['scripts'] as $package => $constraint) {
-//            $manipulator->addLink('require', $package, $constraint);
-//        }
-//
-//        var_dump($config['scripts']); die(sprintf('Dump originated from %s on line %s', __FILE__, __LINE__));
-//
-//        file_put_contents($composerJson, $manipulator->getContents());
     }
 
     public static function runComposerUpdate(Event $event)
