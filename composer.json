@@ -6,8 +6,16 @@
             "email": "jeroen@fieg.nl"
         }
     ],
-    "minimum-stability": "stable",
     "require": {
       "symfony/framework-standard-edition": "~2.3"
+    },
+    "scripts": {
+      "post-install-cmd": [
+        "Fieg\\SymfonyBootstrap\\ScriptHandler::patch"
+      ]
+    },
+    "minimum-stability": "stable",
+    "autoload": {
+      "psr-0": { "": "src/" }
     }
 }
