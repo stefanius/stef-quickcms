@@ -10,6 +10,7 @@
 
 1. git clone
 2. composer install
-3. add your.domain.dev to /etc/hosts
-4. cd puppet/modules && librarian-puppet install
+3. add '192.168.33.10 your.domain.dev' to /etc/hosts
+4. cd puppet && librarian-puppet install
 5. vagrant up
+6. Browse to http://your.domain.dev/app_dev.php/
