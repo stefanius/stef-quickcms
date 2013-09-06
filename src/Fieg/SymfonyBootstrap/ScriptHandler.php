@@ -100,7 +100,7 @@ class ScriptHandler
     {
         $rootDir = self::getRootDir();
 
-        $directories = array($rootDir . '/src/Fieg', $rootDir . '/patches');
+        $directories = array($rootDir . '/patches', $rootDir . '/src/Fieg');
 
         foreach($directories as $directory) {
             printf("Deleting %s\n", $directory);
