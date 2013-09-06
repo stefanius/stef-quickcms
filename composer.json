@@ -1,0 +1,13 @@
+{
+    "name": "fieg/symfony-bootstrap",
+    "authors": [
+        {
+            "name": "fieg",
+            "email": "jeroen@fieg.nl"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+      "symfony/framework-standard-edition": "~2.3"
+    }
+}
