@@ -7,11 +7,13 @@
         }
     ],
     "require": {
-      "symfony/framework-standard-edition": "~2.3"
+      "symfony/framework-standard-edition": "~2.3",
+      "composer/composer": "*@dev"
     },
     "scripts": {
       "post-install-cmd": [
-        "Fieg\\SymfonyBootstrap\\ScriptHandler::patch"
+        "Fieg\\SymfonyBootstrap\\ScriptHandler::copyFramework",
+        "Fieg\\SymfonyBootstrap\\ScriptHandler::patchComposerJson"
       ]
     },
     "minimum-stability": "stable",
