@@ -4,6 +4,7 @@
 * [Vagrant](http://downloads.vagrantup.com/)
 * [Composer](http://getcomposer.org/download/)
 * git
+* [puppet](http://docs.puppetlabs.com/guides/installation.html#install-puppet-1)
 * [librarian-puppet](http://librarian-puppet.com/)
 
 ## Getting started
