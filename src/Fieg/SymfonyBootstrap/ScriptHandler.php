@@ -95,4 +95,17 @@ class ScriptHandler
 
         echo $process->getOutput();
     }
+
+    public static function cleanup(Event $event)
+    {
+        $rootDir = self::getRootDir();
+
+        $directories = array($rootDir . '/src/Fieg', $rootDir . '/patches');
+
+        foreach($directories as $directory) {
+            printf("Deleting %s\n", $directory);
+            $filesystem = new Filesystem();
+            $filesystem->remove($directory);
+        }
+    }
 }
