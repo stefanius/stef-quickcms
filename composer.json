@@ -13,7 +13,9 @@
     "scripts": {
       "post-install-cmd": [
         "Fieg\\SymfonyBootstrap\\ScriptHandler::copyFramework",
-        "Fieg\\SymfonyBootstrap\\ScriptHandler::patchComposerJson"
+        "Fieg\\SymfonyBootstrap\\ScriptHandler::applyPatches",
+        "Fieg\\SymfonyBootstrap\\ScriptHandler::patchComposerJson",
+        "Fieg\\SymfonyBootstrap\\ScriptHandler::runComposerUpdate"
       ]
     },
     "minimum-stability": "stable",
