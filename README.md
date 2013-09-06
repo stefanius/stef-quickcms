@@ -11,5 +11,5 @@
 1. git clone
 2. composer install
 3. add your.domain.dev to /etc/hosts
-4. cd modules && librarian-puppet install
+4. cd puppet/modules && librarian-puppet install
 5. vagrant up
