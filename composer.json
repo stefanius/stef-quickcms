@@ -15,7 +15,8 @@
         "Fieg\\SymfonyBootstrap\\ScriptHandler::copyFramework",
         "Fieg\\SymfonyBootstrap\\ScriptHandler::applyPatches",
         "Fieg\\SymfonyBootstrap\\ScriptHandler::patchComposerJson",
-        "Fieg\\SymfonyBootstrap\\ScriptHandler::runComposerUpdate"
+        "Fieg\\SymfonyBootstrap\\ScriptHandler::runComposerUpdate",
+        "Fieg\\SymfonyBootstrap\\ScriptHandler::cleanup"
       ]
     },
     "minimum-stability": "stable",
