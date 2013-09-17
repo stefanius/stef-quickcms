@@ -9,21 +9,24 @@
 
 ## Getting started
 
-1. git clone
-2. composer install
-3. add '192.168.33.10 your.domain.dev' to /etc/hosts
-4. cd puppet && librarian-puppet install
-5. vagrant up
+1. Run `git clone`
+2. Run `composer install`
+3. Add `192.168.33.10 your.domain.dev` to `/etc/hosts`
+4. Run `cd puppet && librarian-puppet install`
+5. Run `vagrant up`
 6. Browse to http://your.domain.dev/app_dev.php/
+7. Or `vagrant ssh` and `cd /vagrant`, then type `php app/console`
 
 ## What's next?
 
 ### Change the domain name
 
-* In `puppet/manifests/site.pp` -> change the line with 'apache::vhost { 'your.domain.com':'
+* In `puppet/manifests/site.pp`: change the line with `apache::vhost { 'your.domain.com':`
 * Update your hosts file (`/etc/hosts`) with the new domain
 
 ### Setup database
 
-* doctrine:database:create
-* doctrine:schema:update --force
+A database is created and configured. To get started:
+
+* Create an entity: `php app/console doctrine:generate:entity`
+* Update the schema's: `doctrine:schema:update --force`
