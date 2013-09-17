@@ -24,9 +24,13 @@
 * In `puppet/manifests/site.pp`: change the line with `apache::vhost { 'your.domain.com':`
 * Update your hosts file (`/etc/hosts`) with the new domain
 
-### Setup database
+### Create your first bundle
+
+* Run `php app/console generate:bundle`
+
+### Setup the database
 
 A database is created and configured. To get started:
 
 * Create an entity: `php app/console doctrine:generate:entity`
-* Update the schema's: `doctrine:schema:update --force`
+* Update the schema: `doctrine:schema:update --force`
