@@ -1,3 +1,6 @@
+Symfony-boostrap is a bootstrap repository to quickly start with a clean symfony-standard 
+checkout (without the demo stuff) and running on vagrant/puppet setup.
+
 ## Prerequisites
 
 * [Virtualbox](https://www.virtualbox.org/wiki/Downloads)
@@ -9,7 +12,7 @@
 
 ## Getting started
 
-1. Run `git clone`
+1. Run `git clone git@github.com:fieg/symfony-bootstrap.git <your-project-dirname>`
 2. Run `composer install`
 3. Add `192.168.33.10 your.domain.dev` to `/etc/hosts`
 4. Run `cd puppet && librarian-puppet install`
