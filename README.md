@@ -37,3 +37,10 @@ A database is created and configured. To get started:
 
 * Create an entity: `php app/console doctrine:generate:entity`
 * Update the schema: `doctrine:schema:update --force`
+
+### Change git remote
+
+To start committing your changes to your own repository:
+
+* Create a new repository
+* Run `git remote set-url origin git://new.url.here`
