@@ -52,9 +52,7 @@ class ScriptHandler
         $finder->files()->in($rootDir . '/patches');
 
         foreach($finder as $file) {
-            // printf("Patching %s (%s)\n", $file->getRelativePathname(), sprintf('patch -p0 < %s', $file->getPathname()));
-
-            $process = new Process(sprintf('patch -p0 < %s', $file->getPathname()), self::getRootDir());
+            $process = new Process(sprintf('patch -p0 < %s', $file->getPathname()), self::getRootDir(), null, null, null);
             $process->run();
 
             echo $process->getOutput();
@@ -104,8 +102,11 @@ class ScriptHandler
 
         foreach($directories as $directory) {
             printf("Deleting %s\n", $directory);
-            $filesystem = new Filesystem();
-            $filesystem->remove($directory);
+
+            $process = new Process(sprintf('rm -rf %s', $directory), self::getRootDir(), null, null, null);
+            $process->run();
         }
+
+        printf("You need to remove %s yourself\n", $rootDir . '/src/Fieg/');
     }
 }
