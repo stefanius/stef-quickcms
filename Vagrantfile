@@ -65,10 +65,9 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     puppet.module_path  = "puppet/modules"
     puppet.manifest_file  = "site.pp"
     puppet.options = [
-      "--verbose",
-      "--debug",
+#      "--verbose",
+#      "--debug",
       "--environment development",
-      "--fileserverconfig=/vagrant/fileserver.conf",
     ]
   end
 end
