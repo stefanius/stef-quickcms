@@ -7,7 +7,7 @@
         }
     ],
     "require": {
-      "symfony/framework-standard-edition": "~2.3",
+      "symfony/framework-standard-edition": "*",
       "composer/composer": "*@dev"
     },
     "scripts": {
