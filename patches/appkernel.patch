@@ -1,0 +1,15 @@
+Index: app/AppKernel.php
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/AppKernel.php	(revision )
++++ app/AppKernel.php	(revision )
+@@ -19,7 +19,6 @@
+         );
+ 
+         if (in_array($this->getEnvironment(), array('dev', 'test'))) {
+-            $bundles[] = new Acme\DemoBundle\AcmeDemoBundle();
+             $bundles[] = new Symfony\Bundle\WebProfilerBundle\WebProfilerBundle();
+             $bundles[] = new Sensio\Bundle\DistributionBundle\SensioDistributionBundle();
+             $bundles[] = new Sensio\Bundle\GeneratorBundle\SensioGeneratorBundle();

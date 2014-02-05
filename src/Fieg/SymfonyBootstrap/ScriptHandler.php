@@ -52,7 +52,7 @@ class ScriptHandler
         $finder->files()->in($rootDir . '/patches');
 
         foreach($finder as $file) {
-            $process = new Process(sprintf('patch -p0 < %s', $file->getPathname()), self::getRootDir(), null, null, null);
+            $process = new Process(sprintf('patch -f -p0 < %s', $file->getPathname()), self::getRootDir(), null, null, null);
             $process->run();
 
             echo $process->getOutput();

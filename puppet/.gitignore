@@ -1,3 +1,2 @@
 .tmp/
-.librarian/
-modules/
+modules/vendor/
