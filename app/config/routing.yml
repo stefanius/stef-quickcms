@@ -1,0 +1,5 @@
+stef_quick_cms:
+    resource: "@StefQuickCmsBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
