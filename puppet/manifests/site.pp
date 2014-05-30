@@ -23,9 +23,9 @@ mysql::db { 'symfony':
 
 class { 'apache': }
 
-apache::vhost { 'your.domain.com':
+apache::vhost { 'quickcms.dev':
   docroot  => '/vagrant/web',
-  serveraliases => ["your.domain.dev"],
+  serveraliases => ["quickcms.dev"],
   directory_allow_override => 'All',
   template => 'symfony-bootstrap/vhost.conf.erb',
 }
