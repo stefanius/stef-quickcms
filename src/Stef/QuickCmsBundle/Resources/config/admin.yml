@@ -1,0 +1,33 @@
+services:
+    sonata.admin.page:
+        class: Stef\QuickCmsBundle\Admin\PageAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: "Content", label: "Pagina's" }
+        arguments:
+            - ~
+            - Stef\QuickCmsBundle\Entity\Page
+            - ~
+        calls:
+            - [ setTranslationDomain, [StefQuickCmsBundle]]
+
+    sonata.admin.template:
+        class: Stef\QuickCmsBundle\Admin\TemplateAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: "Twig", label: "Templates" }
+        arguments:
+            - ~
+            - Stef\QuickCmsBundle\Entity\Template
+            - ~
+        calls:
+            - [ setTranslationDomain, [StefQuickCmsBundle]]
+
+    sonata.admin.basetemplate:
+        class: Stef\QuickCmsBundle\Admin\BaseTemplateAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: "Twig", label: "Base Templates" }
+        arguments:
+            - ~
+            - Stef\QuickCmsBundle\Entity\BaseTemplate
+            - ~
+        calls:
+            - [ setTranslationDomain, [StefQuickCmsBundle]]
