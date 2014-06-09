@@ -10,6 +10,17 @@ services:
         calls:
             - [ setTranslationDomain, [StefQuickCmsBundle]]
 
+    sonata.admin.url:
+        class: Stef\QuickCmsBundle\Admin\UrlAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: "Content", label: "Urls" }
+        arguments:
+            - ~
+            - Stef\QuickCmsBundle\Entity\Url
+            - ~
+        calls:
+            - [ setTranslationDomain, [StefQuickCmsBundle]]
+
     sonata.admin.template:
         class: Stef\QuickCmsBundle\Admin\TemplateAdmin
         tags:
